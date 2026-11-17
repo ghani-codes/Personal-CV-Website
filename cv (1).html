@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional CV | Your Name</title>
+<style>
+:root {
+  --navy: #14243b;
+  --blue: #3977bd;
+  --light: #f2f5f9;
+  --text: #273449;
+  --muted: #718096;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 35px 15px;
+  background: #e9edf3;
+  font-family: Times New Roman , Helvetica, sans-serif;
+  color: var(--text);
+}
+.toolbar {
+  max-width: 900px;
+  margin: 0 auto 18px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+button {
+  border: none;
+  background: var(--navy);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+button:hover { background: var(--blue); }
+.cv {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  min-height: 1100px;
+  box-shadow: 0 10px 40px #1b2b441c;
+}
+.sidebar {
+  background: var(--navy);
+  color: white;
+  padding: 40px 27px;
+}
+.main { padding: 48px 38px; }
+.profile {
+  width: 115px;
+  height: 115px;
+  border: 3px solid #91b9e7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  font-size: 42px;
+  background: #263d5c;
+}
+h1 {
+  color: var(--navy);
+  font-size: 35px;
+  margin: 0 0 9px;
+  line-height: 1.2;
+}
+.role {
+  color: var(--blue);
+  font-size: 16px;
+  margin-bottom: 32px;
+  font-weight: bold;
+}
+h2 {
+  color: var(--navy);
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-bottom: 2px solid #dce5ef;
+  padding-bottom: 10px;
+  margin: 32px 0 17px;
+}
+.sidebar h2 {
+  color: white;
+  border-bottom: 1px solid #52627a;
+  font-size: 15px;
+  margin-top: 30px;
+}
+p {
+  line-height: 1.7;
+  font-size: 13.5px;
+  margin: 8px 0;
+}
+.sidebar p { color: #d4dfed; }
+.contact-item {
+  font-size: 13px;
+  margin: 13px 0;
+  overflow-wrap: anywhere;
+  color: #d4dfed;
+}
+.contact-item span {
+  display: block;
+  color: #91b9e7;
+  font-size: 10px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  letter-spacing: 1px;
+}
+.skill {
+  margin: 14px 0;
+  font-size: 13px;
+}
+.skill-bar {
+  height: 5px;
+  background: #52627a;
+  margin-top: 7px;
+  border-radius: 5px;
+}
+.skill-bar div {
+  height: 100%;
+  background: #8db9ed;
+  border-radius: 5px;
+  width: 75%;
+}
+.entry { margin: 20px 0; }
+.entry h3 {
+  margin: 0 0 6px;
+  color: var(--navy);
+  font-size: 16px;
+}
+.date {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.placeholder {
+  color: var(--muted);
+  font-style: italic;
+}
+footer {
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 45px;
+  text-align: center;
+}
+@media(max-width:650px) {
+  body { padding: 10px; }
+  .cv { grid-template-columns: 1fr; }
+  .sidebar { padding: 30px; }
+  .main { padding: 30px 25px; }
+  h1 { font-size: 29px; }
+}
+@media print {
+  @page { size: A4; margin: 0; }
+  body { padding: 0; background: white; }
+  .toolbar { display: none; }
+  .cv {
+    max-width: none;
+    width: 100%;
+    box-shadow: none;
+    min-height: 297mm;
+    grid-template-columns: 32% 68%;
+  }
+  .sidebar {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  .cv, .entry { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button onclick="window.print()">⬇ Download / Print CV</button>
+</div>
+
+<div class="cv">
+
+  <aside class="sidebar">
+    <div class="profile">MGI</div>
+
+    <h2>Contact</h2>
+    <div class="contact-item">
+      <span>Email</span>
+      ghanikhan7k@gmail.com
+    </div>
+    <div class="contact-item">
+      <span>Phone</span>
+      +92 3184196492
+    </div>
+    <div class="contact-item">
+      <span>Location</span>
+      Lahore, Pakistan
+    </div>
+
+    <h2>Skills</h2>
+    <div class="skill">
+      Technical Skills
+      <div class="skill-bar"><div></div></div>
+    </div>
+    <div class="skill">
+      Communication
+      <div class="skill-bar"><div></div></div>
+    </div>
+    <div class="skill">
+      Problem Solving
+      <div class="skill-bar"><div></div></div>
+    </div>
+    
+    <h2>Languages</h2>
+    <p>English</p>
+    <p>Urdu</p>
+
+    <h2>Profiles</h2>
+    <p class="placeholder">GitHub :  ghani-codes</p>
+  </aside>
+
+  <main class="main">
+    <h1>Muhammad Ghani Iqbal</h1>
+    <div class="role">Software Engineering Student</div>
+    <h2>I am a Software Engineering Student at Comsats. I did my intermediate from PGC. </h2>
+    <p class="placeholder">
+      Currently I am exploring Data Structures, learning Programming Languages,APIs, Django's Ready to use Templates.
+	  and converting my creativity into real life projects.
+    </p>
+
+    <h2>Education</h2>
+    <div class="entry">
+      <h3>BS Software Engineering</h3>
+      <div class="date">1st Semester</div>
+      <p>Comsats Lahore</p>
+      <p class="placeholder">
+        Secured A+ grades in both Matriculation & Intermediate Exams
+      </p>
+    </div>
+
+    <h2>Work Experience</h2>
+    <div class="entry">
+      <h3>Front End Developer</h3>
+      <div class="date">Start Date – End Date</div>
+      <p>Django Pakistan</p>
+      <p class="placeholder">
+       Appointed as a learner at Django Pakistan , accomplishing real life projects and exploring industrial work psyche.
+      </p>
+    </div>
+
+    <h2>Projects</h2>
+    <div class="entry">
+      <h3>Django Based Portfolio</h3>
+      <p class="placeholder">
+        Explain what you created, which technologies you used,
+        and what you accomplished.
+      </p>
+    </div>
+
+    <h2>Achievements & Certifications</h2>
+    <p class="placeholder">
+      Add awards, certificates, workshops, and accomplishments here.
+    </p>
+
+    <h2>Career Objective</h2>
+    <p class="placeholder">
+      Describe your career goals and the opportunities you are seeking.
+    </p>
+
+    <footer>Professional Curriculum Vitae</footer>
+  </main>
+
+</div>
+</body>
+</html>
